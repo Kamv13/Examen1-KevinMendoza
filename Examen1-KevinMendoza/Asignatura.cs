@@ -39,20 +39,20 @@ namespace Examen1_KevinMendoza
 
         public string MensajeNotaFinal(double NotaFinal)
         {
-            if (this.NotaFinal <= 59)
+            if (NotaFinal >= 89)
             {
-                return "Reprobado";
+                return "Excelente";
             }
-            else if (this.NotaFinal >= 60 && this.NotaFinal <= 79)
+            else if (NotaFinal > 80)
+            {
+                return "Muy Bueno";
+            }
+            else if (NotaFinal < 60)
             {
                 return "Bueno";
             }
-            else if (this.NotaFinal >= 80 && this.NotaFinal <= 89)
-            {
-                return "Muy bueno";
-            }
             else
-                return "Excelente";
+                return "Reprobado";
         }
     }
 }
